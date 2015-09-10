@@ -36,7 +36,8 @@ describe('TodoController', function() {
                 expect($log.info.logs).to.match(/Activated/);
             });
             it("should have a list of todo's",function(){
-                expect(controller.todos).to.equal(mockData.getMockTodos());
+                console.log(mockData.getMockTodos());
+                expect(controller.todos[0].title).to.equal(mockData.getMockTodos()[0].title);
             });
         });
     });

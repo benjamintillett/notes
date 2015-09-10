@@ -10,7 +10,8 @@
     function dataservice($http, $q, exception, logger) {
         var service = {
             getPeople: getPeople,
-            getMessageCount: getMessageCount
+            getMessageCount: getMessageCount,
+            getTodos: getTodos 
         };
 
         return service;
@@ -30,8 +31,9 @@
                 return exception.catcher('XHR Failed for getPeople')(e);
             }
         }
-        function getPeople() {
-            return $http.get('/api/people')
+
+        function getTodos() {
+            return $http.get('/api/todos')
                 .then(success)
                 .catch(fail);
 
@@ -40,7 +42,7 @@
             }
 
             function fail(e) {
-                return exception.catcher('XHR Failed for getPeople')(e);
+                return exception.catcher('XHR Failed for getTodos')(e);
             }
         }
     }

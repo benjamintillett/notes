@@ -1,5 +1,6 @@
 module.exports = {
-    people: getPeople()
+    people:     getPeople(),
+    todos:   getTodos()
 };
 
 function getPeople() {

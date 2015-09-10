@@ -11,11 +11,13 @@
         var vm = this;
         vm.title = 'Todos';
 
-
         activate();
 
         function activate() {
             logger.info('Activated Todo View');
+            dataservice.getTodos().then(function(todos){
+                vm.todos = todos;
+            });
         }
     }
 })();
