@@ -2,16 +2,8 @@
     <section class="matter">
         <div class="container">
             <div class="row">
-                <div class="widget wviolet" ng-repeat='todo in vm.todos'>
-                    <div ht-widget-header title="{{todo.title}}"></div>
-                    <div class="widget-content user">
-                        <h3>{{ todo.description }}</h3>
-                    </div>
-                    <div class="widget-foot">
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-
+                <todo-small todo='todo' ng-repeat='todo in vm.todos'></todo-small>    
+                <button class='btn btn-primary' ng-click="vm.createTodo({title: 'new todo', description: 'this is the description'})";>Add todo</button>
             </div>
         </div>
     </section>

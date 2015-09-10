@@ -13,11 +13,22 @@
 
         activate();
 
-        function activate() {
-            logger.info('Activated Todo View');
+        vm.createTodo = function(todo) {
+            dataservice.createTodo(todo).then(function(todo){
+                logger.info('Created todo');
+                getTodos();
+            });
+        }
+
+        function getTodos(){
             dataservice.getTodos().then(function(todos){
                 vm.todos = todos;
             });
+        }
+
+        function activate() {
+            logger.info('Activated Todo View');
+            getTodos();
         }
     }
 })();

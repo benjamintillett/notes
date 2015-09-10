@@ -9,7 +9,8 @@ describe('TodoController', function() {
 
     beforeEach(function () {
         bard.mockService(dataservice, {
-            getTodos: $q.when(mockData.getMockTodos()),
+            createTodo: $q.when({ title: "todo title", description: "todo description"}),
+            getTodos: $q.when(mockData.getMockTodos())
         });
 
 
@@ -36,9 +37,26 @@ describe('TodoController', function() {
                 expect($log.info.logs).to.match(/Activated/);
             });
             it("should have a list of todo's",function(){
-                console.log(mockData.getMockTodos());
                 expect(controller.todos[0].title).to.equal(mockData.getMockTodos()[0].title);
             });
+        });
+
+        describe('createTodo', function(){
+            var todo;
+
+            beforeEach(function() {
+                todo = { title: "todo title", description: "todo description"}
+                controller.createTodo(todo);
+                $rootScope.$apply();
+            });
+
+            it('tells the dataservice to create the todo',function(){
+                expect(dataservice.createTodo).to.have.been.calledWith(todo);
+            });
+
+            it('updates vm.todos',function(){
+                expect(dataservice.getTodos).to.have.been.calledTwice;
+            })
         });
     });
 });
