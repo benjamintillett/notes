@@ -14,7 +14,7 @@
 
         function link(scope, element, attrs) {
         	element.bind("mouseenter",function(){
-        		console.log("Mouse has entered the div");
+        		scope.$apply(attrs.entering);
         	})
         }
     }

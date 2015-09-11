@@ -13,8 +13,12 @@
         vm.title = 'ThinksterController';
 
       	vm.startFun = startFun;
+		vm.enter = enter;
 
 
+      	function enter(){
+      		console.log("You have entered!");
+      	}
 
         function startFun(){
         	console.log("fun times have started!");
