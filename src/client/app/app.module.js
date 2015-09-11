@@ -7,7 +7,8 @@
         'app.admin',
         'app.todo',
         'app.dashboard',
-        'app.layout'
+        'app.layout',
+        'app.thinkster'
     ]);
 
 })();
