@@ -12,11 +12,13 @@
         var vm = this;
         vm.title = 'ThinksterController';
 
-        activate();
+      	vm.startFun = startFun;
 
-        
 
-        function activate() {
+
+        function startFun(){
+        	console.log("fun times have started!");
         }
+
     }
 })();
