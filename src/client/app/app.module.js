@@ -9,6 +9,7 @@
         'app.dashboard',
         'app.layout',
         'app.thinkster',
+        'app.thinkster2',
         'app.tabs'
     ]);
 

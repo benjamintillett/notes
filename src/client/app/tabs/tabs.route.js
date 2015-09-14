@@ -22,7 +22,7 @@
                     controllerAs: 'vm',
                     title: 'tabs',
                     settings: {
-                        nav: 2,
+                        nav: 6,
                         content: '<i class="fa fa-lock"></i> tabs'
                     }
                 }

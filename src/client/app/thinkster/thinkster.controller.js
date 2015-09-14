@@ -13,7 +13,7 @@
         vm.title = 'ThinksterController';
 
       	vm.startFun = startFun;
-		vm.enter = enter;
+		    vm.enter = enter;
 
 
       	function enter(){

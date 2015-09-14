@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.thinkster')
+        .module('app.thinkster2')
         .run(appRun);
 
     appRun.$inject = ['routerHelper'];
@@ -14,16 +14,16 @@
     function getStates() {
         return [
             {
-                state: 'thinkster',
+                state: 'thinkster2',
                 config: {
-                    url: '/thinkster',
-                    templateUrl: 'app/thinkster/thinkster.html',
-                    controller: 'ThinksterController',
+                    url: '/thinkster2',
+                    templateUrl: 'app/thinkster2/thinkster2.html',
+                    controller: 'Thinkster2Controller',
                     controllerAs: 'vm',
-                    title: 'thinkster',
+                    title: 'Thinkster2',
                     settings: {
-                        nav: 2,
-                        content: '<i class="fa fa-lock"></i> thinkster'
+                        nav: 5,
+                        content: '<i class="fa fa-lock"></i> Thinkster2'
                     }
                 }
             }

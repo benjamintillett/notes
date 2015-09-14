@@ -22,7 +22,7 @@
                     controllerAs: 'vm',
                     title: 'todo',
                     settings: {
-                        nav: 2,
+                        nav: 3,
                         content: '<i class="fa fa-lock"></i> Todo'
                     }
                 }

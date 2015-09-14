@@ -22,7 +22,7 @@
                     controllerAs: 'vm',
                     title: 'thinkster',
                     settings: {
-                        nav: 2,
+                        nav: 4,
                         content: '<i class="fa fa-lock"></i> thinkster'
                     }
                 }
