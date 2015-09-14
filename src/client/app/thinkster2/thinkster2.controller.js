@@ -10,6 +10,9 @@
     /* @ngInject */
     function Thinkster2Controller() {
         var vm = this;
+
+        vm.ctrlFlavour = "blackberry";
+        
         vm.logChore = function(chore){
         	if(chore) {
         		alert(chore + ' is done');
