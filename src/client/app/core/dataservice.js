@@ -56,6 +56,10 @@
             return deferred.promise;
         }
 
+        function deleteTodo(todoIndex){
+            service.todos.splice(todoIndex);
+        }
+        
         // function getTodos() {
         //     return $http.get('/api/todos')
         //         .then(success)

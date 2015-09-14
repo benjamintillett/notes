@@ -8,7 +8,8 @@
         'app.todo',
         'app.dashboard',
         'app.layout',
-        'app.thinkster'
+        'app.thinkster',
+        'app.tabs'
     ]);
 
 })();
