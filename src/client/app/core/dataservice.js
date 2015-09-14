@@ -12,7 +12,8 @@
             getPeople: getPeople,
             getMessageCount: getMessageCount,
             getTodos: getTodos,
-            createTodo: createTodo
+            createTodo: createTodo,
+            deleteTodo: deleteTodo
         };
 
         service.todos = [
@@ -58,6 +59,13 @@
 
         function deleteTodo(todoIndex){
             service.todos.splice(todoIndex);
+            
+            var deferred = $q.defer();
+
+            deferred.resolve(todoIndex);
+            
+            return deferred.promise;
+
         }
         
         // function getTodos() {

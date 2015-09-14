@@ -2,7 +2,7 @@
     <section class="matter">
         <div class="container">
             <div class="row">
-                <todo-small todo='todo' ng-repeat='todo in vm.todos'></todo-small>    
+                <todo-small todo="todo" sayHello="vm.sayHello()" ng-repeat='todo in vm.todos'></todo-small>    
                 <button class='btn btn-primary' ng-click="vm.createTodo({title: 'new todo', description: 'this is the description'})";>Add todo</button>
             </div>
         </div>

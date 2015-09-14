@@ -1,10 +1,10 @@
 <div class="widget wviolet" >
 	<div class='widget-head'>
-		{{ todoSmall.todo.title }}
+		{{ todo.title }}
 	</div>
 	<div class="widget-content user">
-	    <h3>{{ todoSmall.todo.description }}</h3>
-	    <a href="#" ng-click='todoSmall.delete($index)'>delete</a>
+	    <h3>{{ todo.description }}</h3>
+	    <a href="#" ng-click='vm.deleteTodo($index)'>delete</a>
 	</div>
 	<div class="widget-foot">
 	    <div class="clearfix"></div>

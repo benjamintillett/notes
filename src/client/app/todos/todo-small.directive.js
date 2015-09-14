@@ -15,20 +15,16 @@
         //
         var todoSmall = {
             templateUrl: 'app/todos/todo-small.tmpl.html',
-            bindToController: true,
             controller: Controller,
             controllerAs: 'todoSmall',
             link: link,
-            restrict: 'E',
-            scope: {
-            	todo: "="
-            }
+            restrict: 'E'
         };
         return todoSmall;
 
-        function link(scope, element, attrs) {
-    
-        }
+        function link(scope, element, attrs,ctrl) {
+            
+        }   
     }
 
     /* @ngInject */

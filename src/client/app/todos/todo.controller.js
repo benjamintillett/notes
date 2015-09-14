@@ -13,6 +13,13 @@
 
         activate();
 
+        vm.deleteTodo = function(index){
+            dataservice.deleteTodo(index).then(function(todo){
+                logger.info("deleted todo");
+                getTodos();
+            })
+        }
+
         vm.createTodo = function(todo) {
             dataservice.createTodo(todo).then(function(todo){
                 logger.info('Created todo');
