@@ -12,9 +12,7 @@
       var vm = this;
       vm.title = 'AngularGuideController';
 
-      vm.customer = {
-        name: "Naomi",
-        address: "1693 Ampitheatre"
-      }  
+      vm.naomi = { name: "Naomi", address: "1693 Ampitheatre"}
+      vm.igor = { name: "Igor", address: "121 Somewhere"}  
     }
 })();
