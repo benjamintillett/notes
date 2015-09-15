@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('app', [
+angular.module('app', [
         'app.core',
         'app.widgets',
         'app.admin',
@@ -10,7 +10,8 @@
         'app.layout',
         'app.thinkster',
         'app.thinkster2',
-        'app.tabs'
+        'app.tabs',
+        'app.angular-guide',
     ]);
 
 })();

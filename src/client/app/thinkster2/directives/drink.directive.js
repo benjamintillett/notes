@@ -13,9 +13,9 @@
         var drink = {
             restrict: 'E',
             scope: {
-            	flavour: "@"
+            	flavour: "="
             },
-            template: "<div>{{ flavour }}</div>"
+            template: '<input type="text" ng-model="flavour">'
             
         };
         return drink;

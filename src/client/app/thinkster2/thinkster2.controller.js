@@ -12,7 +12,10 @@
         var vm = this;
 
         vm.ctrlFlavour = "blackberry";
-        
+        vm.callHome = function(message){
+        	console.log(message);
+        }
+
         vm.logChore = function(chore){
         	if(chore) {
         		alert(chore + ' is done');
