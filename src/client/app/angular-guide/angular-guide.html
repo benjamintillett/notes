@@ -12,7 +12,18 @@
 			  Date format: <input ng-model="vm.format"> <hr/>
 			  Current time is: <span my-current-time="vm.format"></span>
 			</div>
+			<br>
+			<br>
+			<div>
+				{{ vm.message }}
+				<my-dialog ng-hide='vm.dialogIsHidden' on-close='vm.hideDialog(message)'>
+					Check out the contents, {{ name }}!
+				</my-dialog>
+            </div>
+            <br>
+            <span my-draggable>drag me!</span>
         </div>
+
     </section>        
 </section>
         
