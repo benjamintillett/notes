@@ -3,8 +3,17 @@
 		Create Todo
 	</div>
 	<div class="widget-content user">
-	    <h3>{{ todo.description }}</h3>
-	    <a href="#" ng-click='vm.deleteTodo($index)'>delete</a>
+		<div class='form-group'>
+			<label>Title</label><br>
+			<input type='text' class='form-control' ng-model="todo.title">
+			{{ todo.title }}
+		</div>
+		<div class='form-group'>
+			<label>Description</label><br>
+			<input type='text' class='form-control' ng-model="todo.description">
+			{{ todo.description }}
+		</div>
+		<button class='btn btn-primary' ng-click="createTodo({message: {title: todo.title, description: todo.description}})">Add todo</button>
 	</div>
 	<div class="widget-foot">
 	    <div class="clearfix"></div>

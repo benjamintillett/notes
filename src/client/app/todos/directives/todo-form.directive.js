@@ -14,8 +14,9 @@
             // link: link,
             // restrict: 'A',
             scope: {
+            	createTodo: "&"
             },
-            templateUrl: 'app/todo/directives/todo-form.tmpl.html'
+            templateUrl: 'app/todos/directives/todo-form.tmpl.html'
         };
         return todoForm;
 
