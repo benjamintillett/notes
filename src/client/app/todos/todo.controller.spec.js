@@ -10,7 +10,8 @@ describe('TodoController', function() {
     beforeEach(function () {
         bard.mockService(dataservice, {
             createTodo: $q.when({ title: "todo title", description: "todo description"}),
-            getTodos: $q.when(mockData.getMockTodos())
+            getTodos: $q.when(mockData.getMockTodos()),
+            deleteTodo: $q.when({success: true})
         });
 
 
@@ -57,6 +58,17 @@ describe('TodoController', function() {
             it('updates vm.todos',function(){
                 expect(dataservice.getTodos).to.have.been.calledTwice;
             })
+        });
+
+        describe('.deleteTodo',function(){
+            beforeEach(function() {
+                controller.deleteTodo(1);
+                $rootScope.$apply();
+            });
+
+            it('tells the dataservice to delete the todo',function(){
+                expect(dataservice.deleteTodo).to.have.been.calledWith(1);
+            });
         });
     });
 });

@@ -14,7 +14,7 @@
         // Creates:
         //
         var todoSmall = {
-            templateUrl: 'app/todos/todo-small.tmpl.html',
+            templateUrl: 'app/todos/directives/todo-small.tmpl.html',
             controller: Controller,
             controllerAs: 'todoSmall',
             link: link,
